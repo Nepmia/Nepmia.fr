@@ -5,9 +5,11 @@ pipeline:
   update_site:
     image: appleboy/drone-ssh
     host: nepmia.design
-    username: drone
+    username: 
+      from_secret: ssh_username
     password:
       from_secret: ssh_password
-    commands:
+    port: 22
+    script:
     - cd /var/www/nepmia/nepmia.fr/
     - git clone https://${{ secrets.GITLOG }}@github.com/Nepmia/Nepmia.fr.git
