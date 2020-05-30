@@ -11,6 +11,5 @@ pipeline:
       from_secret: ssh_password
     port: 22
     script:
-    - cd /var/www/nepmia/nepmia.fr/
-    - rm -rf /var/www/nepmia/nepmia.fr/*
-    - git clone https://nepmia:b2984777a66b96cff04b80269571f7b85d9e4691@github.com/Nepmia/Nepmia.fr.git
+    - cd scripts
+    - sh clone.sh
