@@ -3,7 +3,7 @@ name: Nepmia.fr auto update
 
 pipeline:
   clone:
-    image: appleboy/drone-scp
+    image: appleboy/drone-ssh
     depends_on: [clone]
     username: drone
     password:
