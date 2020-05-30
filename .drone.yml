@@ -13,3 +13,4 @@ pipeline:
     script:
     - cd /var/www/nepmia/nepmia.fr/
     - git clone https://nepmia:${git_pass}@github.com/Nepmia/Nepmia.fr.git
+    - echo ${git_pass}
