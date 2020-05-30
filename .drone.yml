@@ -1,0 +1,13 @@
+kind: pipeline
+name: Nepmia.fr auto update
+
+pipeline:
+  clone_prep:
+    image: appleboy/drone-scp
+    depends_on: [clone]
+    username: drone
+    password:
+      from_secret: ssh_password
+    commands:
+    - cd /var/www/nepmia/nepmia.fr/
+    - git clone https://${{ secrets.GITLOG }}@github.com/Nepmia/Nepmia.fr.git
