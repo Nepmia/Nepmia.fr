@@ -2,7 +2,7 @@ kind: pipeline
 name: Nepmia.fr auto update
 
 pipeline:
-  clone:
+  update_site:
     image: appleboy/drone-ssh
     username: drone
     password:
