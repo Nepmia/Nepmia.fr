@@ -2,7 +2,7 @@ kind: pipeline
 name: Nepmia.fr auto update
 
 pipeline:
-  clone_prep:
+  clone:
     image: appleboy/drone-scp
     depends_on: [clone]
     username: drone
