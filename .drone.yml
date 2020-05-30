@@ -11,5 +11,5 @@ pipeline:
       from_secret: ssh_password
     port: 22
     script:
-    - cd /home/drone/scipts/
+    - cd scripts
     - bash update.sh
